@@ -4,6 +4,8 @@ DROP TABLE IF EXISTS users cascade;
 
 drop table if exists github_users;
 
+drop table if exists posts;
+
 CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   email VARCHAR,
@@ -17,4 +19,9 @@ id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 login text not null,
 email text,
 avatar text
+);
+
+CREATE TABLE posts (
+id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+post VARCHAR(255)
 );
